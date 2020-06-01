@@ -29,7 +29,7 @@ describe('text', () => {
     cy.eyesCheckWindow(this.test.title);
   });
 
-  it('allow to apply inline styles and links', function() {
+  it.only('allow to apply inline styles and links', function() {
     cy.loadEditorAndViewer('plain')
       .setTextStyle(INLINE_TOOLBAR_BUTTONS.BOLD, [40, 10])
       .setTextStyle(INLINE_TOOLBAR_BUTTONS.UNDERLINE, [10, 5])
