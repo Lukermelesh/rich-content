@@ -105,7 +105,7 @@ By default, the mobile toolbar is rendered internally if the `isMobile` prop is 
 
 ##### RCV
 
-Expand for image and gallery is handled internally by default. If `onExpand` config supply for image and gallery plugins will override this behavior.
+If the `helpers.onExpand` is undefined, the expand mode is handled internally.
 
 ##### RCE
 

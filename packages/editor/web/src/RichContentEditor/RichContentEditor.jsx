@@ -39,7 +39,6 @@ import draftStyles from '../../statics/styles/draft.rtlignore.scss';
 import 'wix-rich-content-common/dist/statics/styles/draftDefault.rtlignore.scss';
 import { convertFromHTML as draftConvertFromHtml } from 'draft-convert';
 import { pastedContentConfig, clearUnnecessaryInlineStyles } from './utils/pastedContentUtil';
-import { deprecateHelpers } from 'wix-rich-content-common/dist/lib/deprecateHelpers.cjs.js';
 
 class RichContentEditor extends Component {
   static getDerivedStateFromError(error) {
@@ -134,7 +133,7 @@ class RichContentEditor extends Component {
       iframeSandboxDomain,
     } = this.props;
 
-    this.fixHelpers(helpers);
+    this.fixFileHandlersName(helpers);
 
     this.contextualData = {
       theme: theme || {},
@@ -263,17 +262,16 @@ class RichContentEditor extends Component {
     if (this.props.textToolbarType !== nextProps.textToolbarType) {
       this.setState({ textToolbarType: nextProps.textToolbarType });
     }
-    this.fixHelpers(nextProps.helpers);
+    this.fixFileHandlersName(nextProps.helpers);
   }
 
-  fixHelpers(helpers) {
+  fixFileHandlersName(helpers) {
     if (helpers?.onFilesChange) {
       // console.warn('helpers.onFilesChange is deprecated. Use helpers.handleFileUpload');
       helpers.handleFileUpload = helpers.onFilesChange;
       // eslint-disable-next-line fp/no-delete
       delete helpers.onFilesChange;
     }
-    deprecateHelpers(helpers, this.props.config);
   }
 
   // TODO: get rid of this ASAP!

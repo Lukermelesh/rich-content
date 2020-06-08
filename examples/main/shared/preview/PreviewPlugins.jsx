@@ -129,19 +129,7 @@ export const config = {
   },
 };
 
-export const getInlineStyleMappers = raw => [
-  textColorInlineStyleMapper(config, raw),
-  textHighlightInlineStyleMapper(config, raw),
-];
-
-export const getConfig = (additionalConfig = {}) => {
-  let _config = { ...config };
-  Object.keys(additionalConfig).forEach(key => {
-    _config[key] = { ...(_config[key] || {}), ...(additionalConfig[key] || {}) };
-  });
-
-  return _config;
-};
+export const getInlineStyleMappers = raw => [textColorInlineStyleMapper(config, raw), textHighlightInlineStyleMapper(config, raw)];
 
 export const decorators = [
   new HashtagDecorator({
@@ -151,5 +139,5 @@ export const decorators = [
       console.log(`'${text}' hashtag clicked!`);
     },
     createHref: decoratedText => `/search/posts?query=${encodeURIComponent('#')}${decoratedText}`,
-  }),
-];
+  })];
+

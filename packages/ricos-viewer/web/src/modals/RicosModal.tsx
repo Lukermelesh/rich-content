@@ -5,15 +5,11 @@ import FullscreenProvider from './fullscreen/FullscreenProvider';
 
 const RicosModal: FunctionComponent<EngineProps> = props => {
   let ModalProvider: ComponentType = Fragment;
-
-  const { children } = props;
+  const { isViewer, children } = props;
   const { onExpand } = children.props.helpers || {};
-  const hasCustomOnExpand =
-    onExpand ||
-    children.props.config?.['wix-draft-plugin-gallery']?.onExpand ||
-    children.props.config?.['wix-draft-plugin-image']?.onExpand;
+  const addFullscreenModal = !onExpand;
 
-  if (!hasCustomOnExpand) {
+  if (isViewer && addFullscreenModal) {
     ModalProvider = FullscreenProvider;
   }
 

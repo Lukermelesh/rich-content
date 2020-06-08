@@ -12,7 +12,6 @@ import { convertToReact } from './utils/convertContentState';
 import viewerStyles from '../statics/rich-content-viewer.scss';
 import viewerAlignmentStyles from '../statics/rich-content-viewer-alignment.rtlignore.scss';
 import rtlStyle from '../statics/rich-content-viewer-rtl.rtlignore.scss';
-import { deprecateHelpers } from 'wix-rich-content-common/dist/lib/deprecateHelpers.cjs.js';
 
 class RichContentViewer extends Component {
   constructor(props) {
@@ -59,7 +58,7 @@ class RichContentViewer extends Component {
     anchorTarget,
     relValue,
     config,
-    helpers: deprecateHelpers(helpers, config),
+    helpers,
     locale,
     disabled,
     seoMode,
