@@ -1114,10 +1114,10 @@ exports[`plugins > html > render html plugin toolbar #0`] =
       "data": {
         "config": {
           "alignment": "center",
-          "height": 551,
+          "height": 575,
           "width": 350
         },
-        "src": "<blockquote class=\"twitter-tweet\" data-lang=\"en\"><p lang=\"en\" dir=\"ltr\">The updates, insights and stories of the engineering challenges we encounter, and our way of solving them. Subscribe to our fresh, monthly newsletter and get these goodies right to your e-mail:<a href=\"https://t.co/0ziRSJJAxK\">https://t.co/0ziRSJJAxK</a> <a href=\"https://t.co/nTHlsG5z2a\">pic.twitter.com/nTHlsG5z2a</a></p>&mdash; Wix Engineering (@WixEng) <a href=\"https://twitter.com/WixEng/status/1076810144774868992?ref_src=twsrc%5Etfw\">December 23, 2018</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
+        "src": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Billy and Louie Dog Apparel is a Norway-based small business that can turn any dog into a fashionista.<br><br>Head here to browse their online <a href=\"https://twitter.com/hashtag/Wix?src=hash&amp;ref_src=twsrc%5Etfw\">#Wix</a> store (together with your dog of course!) &gt;&gt; <a href=\"https://t.co/M9XhahRsjo\">https://t.co/M9XhahRsjo</a><a href=\"https://twitter.com/hashtag/DailyWixInspiration?src=hash&amp;ref_src=twsrc%5Etfw\">#DailyWixInspiration</a> <a href=\"https://twitter.com/hashtag/PetLove?src=hash&amp;ref_src=twsrc%5Etfw\">#PetLove</a> <a href=\"https://t.co/PPKDvdYNNq\">pic.twitter.com/PPKDvdYNNq</a></p>&mdash; Wix (@Wix) <a href=\"https://twitter.com/Wix/status/1241125363272556547?ref_src=twsrc%5Etfw\">March 20, 2020</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
         "srcType": "html"
       },
       "mutability": "IMMUTABLE",
